@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Montagem</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding center text-center>
+    <!--teste de posicionamento-->
+    <ion-grid>
+
+        <img class="logo-teste" url="../../../src/assets/imgs/logo.png" />
+
+        <ion-card>
+            <ion-row>
+                <ion-card-header col-12>
+                    <ion-col>
+                        <button ion-item>
+                            <ion-icon name="magnet" item-start></ion-icon>
+                                Selecione a Mangueira (hose)
+                        </button>
+                    </ion-col>
+                </ion-card-header>
+            </ion-row>
+        </ion-card>
+
+        <ion-card>
+            <ion-row>
+                <ion-card-header col-5>
+                    <ion-col> <button ion-button outline>Lado A</button> </ion-col>
+                </ion-card-header>
+                <ion-card-header col-2></ion-card-header>
+
+                <ion-card-header col-5>
+                    <ion-col>
+                        <button ion-button color="secondary" outline>Lado B</button></ion-col>
+                </ion-card-header>
+            </ion-row>
+        </ion-card>
+
+        <ion-card>
+            <ion-row>
+                <ion-card-header col-12>
+                    <ion-col>
+                        <ion-input text-center placeholder="comprimento em cm" type="number"></ion-input>
+                    </ion-col>
+                </ion-card-header>
+            </ion-row>
+        </ion-card>
+
+        <ion-card>
+            <ion-card-header col-12>
+                <ion-col><a>Revestimento</a></ion-col>
+            </ion-card-header>
+            <ion-card-content>
+                Aqui carregará o Revestimento da mangueira
+            </ion-card-content>
+        </ion-card>
+
+        <p>
+            <button ion-button color="secondary">Enviar a Cotação</button>
+        </p>
+
+    </ion-grid>
+</ion-content>

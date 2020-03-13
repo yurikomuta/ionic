@@ -1,7 +1,12 @@
-<ion-content padding center text-center>
-    <ion-title> Bem vindo a Hitocom </ion-title>
+<ion-header>
+    <ion-navbar>
+        <ion-title>Criar A Conta </ion-title>
+    </ion-navbar>
+</ion-header>
 
+<ion-content padding center text-center>
     <ion-list>
+
         <ion-item>
             <ion-input placeholder="CNPJ/CPF" type="number" [(ngModel)]="cnpjcpf"></ion-input>
         </ion-item>
@@ -9,17 +14,17 @@
             <ion-input placeholder="E-mail" type="text" [(ngModel)]="email"></ion-input>
         </ion-item>
         <ion-item>
+            <ion-input placeholder="(XX) 9XXXX-XXXX" type="number" [(ngModel)]="celular"></ion-input>
+        </ion-item>
+        <ion-item>
             <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
         </ion-item>
         <ion-item>
-            <a>Esquece a Senha</a>
+            <ion-input placeholder="Repeat Password" type="password" [(ngModel)]="repass"></ion-input>
         </ion-item>
+
     </ion-list>
 
-    <button ion-button full (click)="login()"> Logar</button>
-    <p>
-        <!--break-->
-    </p>
-    <button ion-button full color="light" (click)="goRegister()"> Criar A Conta </button>
+    <button ion-button color="secondary" (click)="register()">Criar a Conta</button>
 
 </ion-content>
