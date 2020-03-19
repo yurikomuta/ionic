@@ -17,6 +17,62 @@
     </div>
 
     <div [ngSwitch]="pontas">
+        <ion-list *ngSwitchCase="'pontaA'">
+            <ion-item>
+                <ion-label>Tipo De Material</ion-label>
+                <ion-select [(ngModel)]="tpmaterial">
+                    <ion-option value="h2o">Água</ion-option>
+                    <ion-option value="cl">Ácido Cloridrico</ion-option>
+                    <ion-option value="">Alcool</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Tipo De Conexão</ion-label>
+                <ion-select [(ngModel)]="tpconexao">
+                    <ion-option value="femea">Femea</ion-option>
+                    <ion-option value="Macho">Macho</ion-option>
+                    <ion-option value="">Outros</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Curva de Conexão</ion-label>
+                <ion-select [(ngModel)]="curvaconexao">
+                    <ion-option value="reta">Reta 0º</ion-option>
+                    <ion-option value="noventa">90º</ion-option>
+                    <ion-option value="">Outros</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Padrão de Rosca</ion-label>
+                <ion-select [(ngModel)]="pdrosca">
+                    <ion-option value="bspt">BSPT</ion-option>
+                    <ion-option value="">Outros</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Formas De Vedação</ion-label>
+                <ion-select [(ngModel)]="FVedacao">
+                    <ion-option value="sede30">Sede 30º Invertido</ion-option>
+                    <ion-option value="CAMLOCK">CAMLOCK</ion-option>
+                    <ion-option value="">Outros</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Diâmetro da Rosca</ion-label>
+                <ion-select [(ngModel)]="diametroRosca">
+                    <ion-option value="meionpt">1/2 NPT</ion-option>
+                    <ion-option value="">Outros</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <div class="bt">
+                <button ion-button color="secondary" round medium>Continuar</button>
+                <button ion-button color="danger" round medium>Limpar</button>
+            </div>
+        </ion-list>
+
+        <!-- PONTA B -->
+
         <ion-list *ngSwitchCase="'pontaB'">
             <ion-item>
                 <ion-label>Tipo De Material</ion-label>
@@ -65,20 +121,18 @@
                 </ion-select>
             </ion-item>
 
+            <div class="bt">
+                <button ion-button color="secondary" round medium>Continuar</button>
+                <button ion-button color="danger" round medium>Limpar</button>
+            </div>
         </ion-list>
-        <!-- Aqui começa a outra ponta -->
-        <ion-list *ngSwitchCase="'pontaA'">
-            <ion-item>
-                <ion-label>Tipo De Material</ion-label>
-                <ion-select [(ngModel)]="tpmaterial">
-                    <ion-option value="h2o">Água</ion-option>
-                    <ion-option value="cl">Ácido Cloridrico</ion-option>
-                    <ion-option value="">Alcool</ion-option>
-                </ion-select>
-            </ion-item>
-        </ion-list>
+
     </div>
 
-    <button ion-button color="secondary" round medium>Continuar</button>
-    <button ion-button color="danger" round medium>Limpar</button>
+    <!-- video de exemplo 
+    <div class="embed-container">
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/4zZh_vQXwgQ" frameborder="0" allowfullscreen>
+    </iframe>
+    </div> -->
+
 </ion-content>
