@@ -1,0 +1,84 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Pontas</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding center>
+    <div padding>
+        <ion-segment [(ngModel)]="pontas">
+            <ion-segment-button value="pontaA">
+                Ponta A
+            </ion-segment-button>
+            <ion-segment-button value="pontaB">
+                Ponta B
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+
+    <div [ngSwitch]="pontas">
+        <ion-list *ngSwitchCase="'pontaB'">
+            <ion-item>
+                <ion-label>Tipo De Material</ion-label>
+                <ion-select [(ngModel)]="tpmaterial">
+                    <ion-option value="inox304">Aço Inox 304</ion-option>
+                    <ion-option value="latao">Latão</ion-option>
+                    <ion-option value="">Outros</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Tipo De Conexão</ion-label>
+                <ion-select [(ngModel)]="tpconexao">
+                    <ion-option value="femea">Femea</ion-option>
+                    <ion-option value="Macho">Macho</ion-option>
+                    <ion-option value="">Outros</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Curva de Conexão</ion-label>
+                <ion-select [(ngModel)]="curvaconexao">
+                    <ion-option value="reta">Reta 0º</ion-option>
+                    <ion-option value="noventa">90º</ion-option>
+                    <ion-option value="">Outros</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Padrão de Rosca</ion-label>
+                <ion-select [(ngModel)]="pdrosca">
+                    <ion-option value="bspt">BSPT</ion-option>
+                    <ion-option value="">Outros</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Formas De Vedação</ion-label>
+                <ion-select [(ngModel)]="FVedacao">
+                    <ion-option value="sede30">Sede 30º Invertido</ion-option>
+                    <ion-option value="CAMLOCK">CAMLOCK</ion-option>
+                    <ion-option value="">Outros</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Diâmetro da Rosca</ion-label>
+                <ion-select [(ngModel)]="diametroRosca">
+                    <ion-option value="meionpt">1/2 NPT</ion-option>
+                    <ion-option value="">Outros</ion-option>
+                </ion-select>
+            </ion-item>
+
+        </ion-list>
+        <!-- Aqui começa a outra ponta -->
+        <ion-list *ngSwitchCase="'pontaA'">
+            <ion-item>
+                <ion-label>Tipo De Material</ion-label>
+                <ion-select [(ngModel)]="tpmaterial">
+                    <ion-option value="h2o">Água</ion-option>
+                    <ion-option value="cl">Ácido Cloridrico</ion-option>
+                    <ion-option value="">Alcool</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+    </div>
+
+    <button ion-button color="secondary" round medium>Continuar</button>
+    <button ion-button color="danger" round medium>Limpar</button>
+</ion-content>

@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PontasPage } from '../pontas/pontas';
 
-/**
- * Generated class for the MontagemPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -20,6 +15,10 @@ export class MontagemPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MontagemPage');
+  }
+
+  pontaA(){
+    this.navCtrl.push(PontasPage);
   }
 
 }
