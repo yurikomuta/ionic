@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { MontagemPage } from '../montagem/montagem';
+import {AlertController} from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -12,7 +13,7 @@ export class HomePage {
   cnpjcpf:number;
   email:string;
   password:string;
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public alertCtrl:AlertController ) {
 
   }
 
@@ -28,4 +29,11 @@ export class HomePage {
     this.navCtrl.push(RegisterPage);
   }
 
+  doAlert(){
+    this.alertCtrl.create({
+      title:'Enviado!',
+      message:'Enviado o código de recuperação. Verifique o email cadastro',
+      buttons:['Fechar']
+    })
+  }
 }

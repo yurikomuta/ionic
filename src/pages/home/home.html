@@ -13,14 +13,14 @@
             <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
         </ion-item>
         <ion-item>
-            <a>Esqueceu a Senha?</a>
+            <a (click)="doAlert()">Esqueceu a Senha?</a>
         </ion-item>
     </ion-list>
 
-    <button ion-button color="secondary" round medium (click)="login()"> Logar</button>
+    <button ion-button color="secondary" medium (click)="login()">  Entrar  </button>
     <p>
         <!--break-->
     </p>
-    <button ion-button color="default" round (click)="goRegister()"> Criar A Conta </button>
+    <button ion-button color="default" (click)="goRegister()"> Nova Conta </button>
 
 </ion-content>

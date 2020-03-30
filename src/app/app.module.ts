@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
 import { MontagemPage } from '../pages/montagem/montagem';
 import { PontasPage } from '../pages/pontas/pontas';
+import { MangueiraPage } from '../pages/mangueira/mangueira';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { PontasPage } from '../pages/pontas/pontas';
     HomePage,
     RegisterPage,
     MontagemPage,
-    PontasPage
+    PontasPage,
+    MangueiraPage
+
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { PontasPage } from '../pages/pontas/pontas';
     HomePage,
     RegisterPage,
     MontagemPage,
-    PontasPage
+    PontasPage,
+    MangueiraPage
   ],
   providers: [
     StatusBar,

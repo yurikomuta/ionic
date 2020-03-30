@@ -14,8 +14,8 @@
             <ion-row>
                 <ion-card-header col-12>
                     <ion-col>
-                        <button ion-item>
-                            <ion-icon name="magnet" item-start></ion-icon>
+                        <button ion-item (click)="mangueira()">
+                            <ion-icon name="magnet" item-start ></ion-icon>
                                 Selecione a Mangueira (hose)
                         </button>
                     </ion-col>
@@ -40,16 +40,13 @@
         </ion-card>
 
         <ion-card>
-            <ion-row>
-                <ion-card-header col-12>
-                    <ion-col>
-                        <ion-input text-center placeholder="comprimento em cm" type="number"></ion-input>
-                    </ion-col>
-                </ion-card-header>
-            </ion-row>
+            <ion-item>
+                <ion-label col-10>Comprimento em cm</ion-label>
+                <ion-input type="number"></ion-input>
+            </ion-item>
         </ion-card>
 
-        <ion-card>
+        <ion-card (click)="mangueira()">
             <ion-card-header col-12>
                 <ion-col><a>Revestimento</a></ion-col>
             </ion-card-header>

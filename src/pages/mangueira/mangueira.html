@@ -1,15 +1,108 @@
-<!--
-  Generated template for the MangueiraPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-  <ion-navbar>
-    <ion-title>mangueira</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Mangueira</ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding center>
 
+    <form>
+        <ion-card>
+            <ion-card-header col-12>
+                <ion-col><a>Mangueira</a></ion-col>
+            </ion-card-header>
+            <ion-searchbar placeholder="Digite O Material a Conduzir" (ionInput)="getItems($event)"></ion-searchbar>
+            <ion-list>
+                <ion-item *ngFor="let item of items">
+                    {{ item }}
+                </ion-item>
+            </ion-list>
+
+
+            <ion-card>
+                <div class="temp-material">
+                    <ion-label col-12>Temperatura de Material</ion-label>
+                    <ion-row>
+                        <input col-6 type="number" placeholder="MIN ºC">
+                        <input col-6 type="number" placeholder="MAX ºC">
+                    </ion-row>
+
+                </div>
+            </ion-card>
+
+            <ion-card>
+                <ion-item>
+                    <ion-label col-10>Pressão De Trabalho (PSI)</ion-label>
+                    <ion-input type="number"></ion-input>
+                </ion-item>
+            </ion-card>
+
+            <ion-item>
+                <ion-label col-6>Trabalho com Vacuo?</ion-label>
+                <ion-toggle disable checked="false"></ion-toggle>
+            </ion-item>
+            <ion-card>
+                <div class="temp-ambiente">
+                    <ion-label col-12> Temperatura Ambiente</ion-label>
+                    <ion-row>
+                        <input col-6 type="number" placeholder="MIN ºC">
+                        <input col-6 type="number" placeholder="MAX ºC">
+                    </ion-row>
+                </div>
+            </ion-card>
+            <ion-item>
+                <ion-label>Tempo Diário Trabalho</ion-label>
+                <ion-select>
+                    <ion-option value="eight">08:00</ion-option>
+                    <ion-option value="twelve">12:00</ion-option>
+                    <ion-option value="eighteen">18:00</ion-option>
+                    <ion-option value="full">24:00</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-card>
+                <ion-item>
+                    <ion-label>Forma de Trabalho</ion-label>
+                    <ion-select>
+                        <ion-option value="move">Com Movimento</ion-option>
+                        <ion-option value="nomove">Sem Movimento</ion-option>
+                    </ion-select>
+                </ion-item>
+            </ion-card>
+            <!-- 
+            <ion-item>
+                <ion-label col-6>Tem Movimento</ion-label>
+                <ion-toggle disable checked="false"></ion-toggle>
+            </ion-item> -->
+            <ion-card>
+                <ion-item>
+                    <ion-label col-10>Comprimento em cm</ion-label>
+                    <ion-input type="number"></ion-input>
+                </ion-item>
+            </ion-card>
+        </ion-card>
+        <!--  começa o térmico -->
+        <ion-card>
+            <ion-card-header col-12>
+                <ion-col><a>Revestimento</a></ion-col>
+            </ion-card-header>
+            <ion-item>
+                <ion-label> Mecânico</ion-label>
+                <ion-select>
+                    <ion-option value="mecanico">Tipos mecanico</ion-option>
+                    <ion-option value="outros">Outros</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Térmico</ion-label>
+                <ion-select>
+                    <ion-option value="termico">Tipos Térmicos</ion-option>
+                    <ion-option value="outros">Outros </ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-card>
+    </form>
+    <p>
+        <button ion-button color="secondary">Salvar</button>
+        <button ion-button color="danger">Limpar</button>
+    </p>
 </ion-content>

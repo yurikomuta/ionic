@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PontasPage } from '../pontas/pontas';
+import { MangueiraPage } from '../mangueira/mangueira';
 
 
 @IonicPage()
@@ -19,6 +20,10 @@ export class MontagemPage {
 
   pontaA(){
     this.navCtrl.push(PontasPage);
+  }
+
+  mangueira(){
+    this.navCtrl.push(MangueiraPage);
   }
 
 }
