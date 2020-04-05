@@ -75,7 +75,7 @@
             </ion-item> -->
             <ion-card>
                 <ion-item>
-                    <ion-label col-10>Comprimento em cm</ion-label>
+                    <ion-label col-10>Comprimento em mm</ion-label>
                     <ion-input type="number"></ion-input>
                 </ion-item>
             </ion-card>
@@ -83,22 +83,31 @@
         <!--  começa o térmico -->
         <ion-card>
             <ion-card-header col-12>
-                <ion-col><a>Revestimento</a></ion-col>
+                <ion-col><a>Revestimento Externo</a></ion-col>
             </ion-card-header>
-            <ion-item>
-                <ion-label> Mecânico</ion-label>
-                <ion-select>
-                    <ion-option value="mecanico">Tipos mecanico</ion-option>
-                    <ion-option value="outros">Outros</ion-option>
-                </ion-select>
-            </ion-item>
             <ion-item>
                 <ion-label>Térmico</ion-label>
                 <ion-select>
-                    <ion-option value="termico">Tipos Térmicos</ion-option>
-                    <ion-option value="outros">Outros </ion-option>
+                    <ion-option value="rtfv">RTFV - Revestimento Trançado Fibra De Vidro</ion-option>
+                    <ion-option value="rtfvs">RTFVS - Revestimento Trançado Fibra De Vidro Com Silicone </ion-option>
+                    <ion-option value="rtfvt">RTFVT - Revestimento Trançado Fibra De Vidro Com Teflon </ion-option>
+                    <ion-option value="rtfc">RTFC - Revestimento Trançado Fibra De Vidro Com Cerâmica </ion-option>
                 </ion-select>
             </ion-item>
+            <ion-item>
+                <ion-label> Mecânico</ion-label>
+                <ion-select>
+                    <ion-option value="rtal">RTAL - Revestimento Trançado Arame Latão </ion-option>
+                    <ion-option value="rtag">RTAG - Revestimento Trançado Arame Galvanizado </ion-option>
+                    <ion-option value="rtai">RTAL - Revestimento Trançado Arame Inox </ion-option>
+                    <ion-option value="mpag">MPAG - Mola Protetora Arame Galvanizado </ion-option>
+                    <ion-option value="mpai">MPAG - Mola Protetora Arame Inox </ion-option>
+                    <ion-option value="mpfa">MPAG - Mola Protetora Fita Em Aço </ion-option>
+                    <ion-option value="mpfi">MPAG - Mola Protetora Fita Em Inox </ion-option>
+                    <ion-option value="mpfp">MPAG - Mola Protetora Fita Em Polimero </ion-option>
+                </ion-select>
+            </ion-item>
+
         </ion-card>
     </form>
     <p>
