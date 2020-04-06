@@ -20,12 +20,30 @@
 
 
             <ion-card>
-                <div class="temp-material">
-                    <ion-label col-12>Temperatura de Material</ion-label>
-                    <ion-row>
-                        <input col-6 type="number" placeholder="MIN ºC">
-                        <input col-6 type="number" placeholder="MAX ºC">
-                    </ion-row>
+                <div class="temp-material" text-center>
+                    <ion-card-header col-12>
+                        <ion-col>Temperatura Material</ion-col>
+                    </ion-card-header>
+
+                    <ion-item>
+                        <ion-label>MIN ºC</ion-label>
+                        <ion-select>
+                            <ion-option value="op1material">-200ºC</ion-option>
+                            <ion-option value="op2material">-100ºC</ion-option>
+                            <ion-option value="op3material">-50ºC</ion-option>
+                            <ion-option value="op4material">0ºC</ion-option>
+                        </ion-select>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>MAX ºC</ion-label>
+                        <ion-select>
+                            <ion-option value="op1maxmaterial">+200ºC</ion-option>
+                            <ion-option value="op2maxmaterial">+100ºC</ion-option>
+                            <ion-option value="op3maxmaterial">+50ºC</ion-option>
+                            <ion-option value="op4maxmaterial"> >0ºC</ion-option>
+                        </ion-select>
+                    </ion-item>
 
                 </div>
             </ion-card>
@@ -42,12 +60,30 @@
                 <ion-toggle disable checked="false"></ion-toggle>
             </ion-item>
             <ion-card>
-                <div class="temp-ambiente">
-                    <ion-label col-12> Temperatura Ambiente</ion-label>
-                    <ion-row>
-                        <input col-6 type="number" placeholder="MIN ºC">
-                        <input col-6 type="number" placeholder="MAX ºC">
-                    </ion-row>
+                <div class="temp-ambiente" text-center>
+                    <ion-card-header col-12>
+                        <ion-col>Temperatura Ambiente</ion-col>
+                    </ion-card-header>
+
+                    <ion-item>
+                        <ion-label>MIN ºC</ion-label>
+                        <ion-select>
+                            <ion-option value="op1">-200ºC</ion-option>
+                            <ion-option value="op2">-100ºC</ion-option>
+                            <ion-option value="op3">-50ºC</ion-option>
+                            <ion-option value="op4">0ºC</ion-option>
+                        </ion-select>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>MAX ºC</ion-label>
+                        <ion-select>
+                            <ion-option value="op1max">+200ºC</ion-option>
+                            <ion-option value="op2max">+100ºC</ion-option>
+                            <ion-option value="op3max">+50ºC</ion-option>
+                            <ion-option value="op4max"> >0ºC</ion-option>
+                        </ion-select>
+                    </ion-item>
                 </div>
             </ion-card>
             <ion-item>
